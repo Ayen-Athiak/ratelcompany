@@ -215,7 +215,7 @@ export default function Services() {
 
       {/* SERVICES LIST */}
       <section className="bg-white">
-        {SERVICES.map(({ num, slug, image, label, tagline, title, desc, features }, i) => (
+        {SERVICES.map(({ slug, image, label, tagline, title, desc, features }, i) => (
           <div key={slug} className="grid md:grid-cols-2 border-b border-gray-100">
 
             {/* Image panel */}
