@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { ChevronDown, ArrowRight, HelpCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
 
 const FAQS = [
   {
@@ -195,21 +194,14 @@ export default function FAQ() {
                             />
                           </div>
                         </button>
-                        <AnimatePresence initial={false}>
-                          {isOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.2 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="px-6 pb-6 text-sm text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
-                                {a}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
+                        <div
+                          className="overflow-hidden transition-all duration-200"
+                          style={{ maxHeight: isOpen ? '600px' : '0px', opacity: isOpen ? 1 : 0 }}
+                        >
+                          <div className="px-6 pb-6 text-sm text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
+                            {a}
+                          </div>
+                        </div>
                       </div>
                     )
                   })}

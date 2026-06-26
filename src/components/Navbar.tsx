@@ -20,7 +20,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <Link
+          to="/"
+          className="flex items-center bg-white rounded-lg px-3 py-1.5"
+          style={{ boxShadow: '0 1px 8px rgba(0,0,0,0.30)' }}
+        >
           <img
             src="/images/logo.png"
             alt="Ratel General Trading"
@@ -65,30 +69,83 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile fullscreen overlay */}
       {open && (
-        <div className="md:hidden bg-navy border-t border-white/10 px-6 py-4 space-y-1">
-          {NAV.map(({ to, label }) => (
+        <div
+          className="md:hidden fixed inset-0 z-[60] flex flex-col"
+          style={{ background: '#2C3E6B' }}
+        >
+          {/* Subtle grid */}
+          <div
+            className="absolute inset-0 opacity-[0.04] pointer-events-none"
+            style={{
+              backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
+              backgroundSize: '60px 60px',
+            }}
+          />
+          <div className="absolute left-0 inset-y-0 w-1 bg-gold pointer-events-none" />
+
+          {/* Top bar — logo + close */}
+          <div className="relative flex items-center justify-between px-6 h-[72px] border-b border-white/10 flex-shrink-0">
             <Link
-              key={to}
-              to={to}
+              to="/"
               onClick={() => setOpen(false)}
-              className="block px-3 py-2.5 text-sm font-semibold rounded-lg transition-colors"
-              style={{
-                color:      pathname === to ? '#C9A84C' : 'rgba(255,255,255,0.7)',
-                background: pathname === to ? 'rgba(201,168,76,0.08)' : 'transparent',
-              }}
+              className="flex items-center bg-white rounded-lg px-3 py-1.5"
+              style={{ boxShadow: '0 1px 8px rgba(0,0,0,0.30)' }}
             >
-              {label}
+              <img
+                src="/images/logo.png"
+                alt="Ratel General Trading"
+                className="h-12 w-auto object-contain"
+                style={{ maxWidth: 200 }}
+              />
             </Link>
-          ))}
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="block mt-3 btn-primary text-center text-sm"
-          >
-            Get a Quote
-          </Link>
+            <button
+              onClick={() => setOpen(false)}
+              className="text-white/70 hover:text-white p-1 transition-colors"
+            >
+              <X size={26} />
+            </button>
+          </div>
+
+          {/* Nav links */}
+          <nav className="relative flex-1 flex flex-col justify-center px-8">
+            {NAV.map(({ to, label }, i) => (
+              <div key={to}>
+                <Link
+                  to={to}
+                  onClick={() => setOpen(false)}
+                  className="block py-5 transition-colors"
+                  style={{ color: pathname === to ? '#C9A84C' : 'rgba(255,255,255,0.85)' }}
+                >
+                  <span className="text-3xl font-serif font-bold">{label}</span>
+                  {pathname === to && (
+                    <span
+                      className="ml-3 text-xs font-bold uppercase tracking-widest align-middle"
+                      style={{ color: '#C9A84C' }}
+                    >
+                      ●
+                    </span>
+                  )}
+                </Link>
+                {i < NAV.length - 1 && (
+                  <div className="h-px w-full" style={{ background: 'rgba(255,255,255,0.08)' }} />
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Bottom CTA */}
+          <div className="relative px-8 pb-10 flex-shrink-0">
+            <div className="h-px w-full mb-6" style={{ background: 'rgba(255,255,255,0.08)' }} />
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="btn-primary w-full justify-center text-sm"
+            >
+              Get a Quote
+            </Link>
+          </div>
         </div>
       )}
     </header>

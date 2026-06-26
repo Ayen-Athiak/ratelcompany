@@ -95,13 +95,13 @@ export default function Products() {
       setLoading(false)
       return
     }
-    supabase.from('products').select('*').order('sort_order')
-      .then(({ data }) => {
-        const result = data && data.length > 0 ? data as Product[] : FALLBACK
-        cacheSet('products', result)
-        setProducts(result)
-        setLoading(false)
-      })
+    ;(async () => {
+      const { data } = await supabase.from('products').select('*').order('sort_order')
+      const result = data && data.length > 0 ? data as Product[] : FALLBACK
+      cacheSet('products', result)
+      setProducts(result)
+      setLoading(false)
+    })()
   }, [])
 
   const cats = ['all', ...Array.from(new Set(products.map(p => p.category)))]

@@ -29,19 +29,20 @@ export default function Blog() {
     const from = page * PAGE_SIZE
     const to   = from + PAGE_SIZE - 1
 
-    supabase
-      .from('posts')
-      .select('*', { count: 'exact' })
-      .eq('published', true)
-      .order('created_at', { ascending: false })
-      .range(from, to)
-      .then(({ data, count }) => {
-        const result = { posts: (data as Post[]) ?? [], total: count ?? 0 }
-        cacheSet(cacheKey, result)
-        setPosts(result.posts)
-        setTotal(result.total)
-        setLoading(false)
-      })
+    ;(async () => {
+      const { data, count } = await supabase
+        .from('posts')
+        .select('*', { count: 'exact' })
+        .eq('published', true)
+        .order('created_at', { ascending: false })
+        .range(from, to)
+
+      const result = { posts: (data as Post[]) ?? [], total: count ?? 0 }
+      cacheSet(cacheKey, result)
+      setPosts(result.posts)
+      setTotal(result.total)
+      setLoading(false)
+    })()
   }, [page])
 
   const totalPages = Math.ceil(total / PAGE_SIZE)

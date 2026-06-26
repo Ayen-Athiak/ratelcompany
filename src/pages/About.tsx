@@ -35,19 +35,10 @@ export default function About() {
     <>
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden pt-20">
-        <div className="absolute inset-0">
-          <img
-            src="/images/image.png"
-            alt="About Ratel General Trading"
-            className="w-full h-full object-cover"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(to top, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0.15) 100%)',
-            }}
-          />
-        </div>
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(135deg, rgba(20,30,70,0.97) 0%, rgba(44,62,107,0.95) 55%, rgba(20,30,70,0.97) 100%)' }}
+        />
         <div className="absolute left-0 inset-y-0 w-1 bg-gold" />
         <div className="relative max-w-7xl mx-auto px-6 pb-16 z-10">
           <div className="section-label text-gold mb-4">Our Story</div>

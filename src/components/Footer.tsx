@@ -8,7 +8,11 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="inline-block mb-4">
+            <Link
+              to="/"
+              className="inline-flex items-center bg-white rounded-lg px-3 py-1.5 mb-4"
+              style={{ boxShadow: '0 1px 8px rgba(0,0,0,0.30)' }}
+            >
               <img
                 src="/images/logo.png"
                 alt="Ratel General Trading"
