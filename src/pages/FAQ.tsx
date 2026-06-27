@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { ChevronDown, ArrowRight, HelpCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
