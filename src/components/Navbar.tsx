@@ -26,7 +26,7 @@ export default function Navbar() {
           style={{ boxShadow: '0 1px 8px rgba(0,0,0,0.30)' }}
         >
           <img
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Ratel General Trading"
             className="h-12 w-auto object-contain"
             style={{ maxWidth: 200 }}
@@ -94,7 +94,7 @@ export default function Navbar() {
               style={{ boxShadow: '0 1px 8px rgba(0,0,0,0.30)' }}
             >
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="Ratel General Trading"
                 className="h-12 w-auto object-contain"
                 style={{ maxWidth: 200 }}

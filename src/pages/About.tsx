@@ -58,9 +58,9 @@ export default function About() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-xl overflow-hidden">
               <img
-                src="/images/Gemini_Generated_Image_qcqjj4qcqjj4qcqj.png"
+                src="/images/Gemini_Generated_Image_qcqjj4qcqjj4qcqj.webp"
                 alt="Our founding story"
-                className="w-full h-full object-cover"
+                loading="lazy" className="w-full h-full object-cover"
               />
             </div>
             <div
@@ -120,25 +120,25 @@ export default function About() {
     <div className="grid md:grid-cols-2 gap-6">
       {[
         {
-          image: '/images/ceo (2).jpeg',
+          image: '/images/boss.webp',
           label: 'Founder & CEO',
           name: 'Victoria Kitale Jaden',
           bio: 'Victoria founded Ratel General Trading in 2026 with a vision to build the most trusted trading company in East Africa. He leads the company with clarity, ambition, and an unwavering commitment to results.',
         },
         {
-          image: '/images/team-trade.jpg',
+          image: '/images/ceo (2).webp',
           label: 'Co-Founder & Managing Director',
           name: 'Biden Peter',
           bio: 'Biden co-founded Ratel and oversees strategic partnerships and business operations. He brings years of experience in cross-border trade with a network of suppliers and buyers across Africa, Asia, and Europe.',
         },
         {
-          image: '/images/mrlogistic.jpeg',
+          image: '/images/mrlogistic.webp',
           label: 'Head of Trade Operations',
           name: 'John Okora',
           bio: 'John manages Ratel\'s import and export operations, ensuring every order is sourced, documented, and delivered to specification. His expertise in trade compliance is central to Ratel\'s reliability.',
         },
         {
-          image: '/images/team-bizdev.jpg',
+          image: '/images/team-bizdev.webp',
           label: 'Logistics & Compliance Manager',
           name: 'David Wani',
           bio: 'David oversees logistics and supply chain operations, from freight forwarding and customs clearance to last-mile delivery. His knowledge of South Sudan\'s regulatory environment ensures shipments move smoothly.',
@@ -170,7 +170,7 @@ export default function About() {
             >
               {label}
             </div>
-            <h3 className="text-lg font-serif font-bold text-navy mb-2 leading-tight">
+            <h3 className="text-xl font-serif font-bold text-navy mb-2 leading-tight">
               {name}
             </h3>
             <p className="text-gray-500 text-xs leading-relaxed">
@@ -235,7 +235,7 @@ export default function About() {
               <img
                 src="/images/south sudan.jpeg"
                 alt="South Sudan connecting the world"
-                className="w-full h-full object-cover"
+                loading="lazy" className="w-full h-full object-cover"
               />
               <div
                 className="absolute inset-0"
@@ -278,7 +278,7 @@ export default function About() {
                 <div className="w-11 h-11 bg-navy rounded-lg flex items-center justify-center mb-5 group-hover:bg-gold transition-colors">
                   <Icon size={20} className="text-gold group-hover:text-navy transition-colors" />
                 </div>
-                <h3 className="font-serif font-bold text-navy text-lg mb-3">{title}</h3>
+                <h3 className="font-serif font-bold text-navy text-xl mb-3">{title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
               </div>
             ))}

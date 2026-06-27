@@ -7,54 +7,54 @@ const SERVICES = [
     num: '01',
     title: 'Import',
     desc: 'Quality goods sourced from global markets with competitive pricing and reliable delivery to your door.',
-    image: '/images/import.jpg',
+    image: '/images/import.webp',
   },
   {
     Icon: Globe,
     num: '02',
     title: 'Export',
     desc: 'Connecting local producers with international buyers with full process management from documentation to delivery.',
-    image: '/images/export.jpg',
+    image: '/images/export.webp',
   },
   {
     Icon: Package,
     num: '03',
     title: 'General Merchandise',
     desc: 'A broad catalog of consumer goods, industrial supplies, and specialty products for bulk and retail trade.',
-    image: '/images/merchandise.jpg',
+    image: '/images/merchandise.webp',
   },
   {
     Icon: Truck,
     num: '04',
     title: 'Logistics Support',
     desc: 'End-to-end logistics including freight forwarding, customs clearance, and last-mile delivery solutions.',
-    image: '/images/logistics.jpeg',
+    image: '/images/logistics.webp',
   },
 ]
 
 const PRODUCTS = [
-  { image: '/images/food-commodities.jpg',    cat: 'Food',         name: 'Food & Commodities',  desc: 'Rice, sugar, flour, cooking oil and staple food commodities for wholesale distribution.' },
-  { image: '/images/building-materials.jpg',  cat: 'Construction', name: 'Building Materials',  desc: 'Steel, cement, roofing sheets, pipes and hardware for large and residential projects.' },
-  { image: '/images/electronics.jpg',         cat: 'Technology',   name: 'Electronics',         desc: 'Consumer electronics and home appliances from trusted global manufacturers.' },
-  { image: '/images/industrial-supplies.jpg', cat: 'Industrial',   name: 'Industrial Supplies', desc: 'Heavy-duty equipment, tools, safety gear and machinery for construction and energy.' },
-  { image: '/images/household-goods.jpg',     cat: 'Consumer',     name: 'Household Goods',     desc: 'Everyday essentials, kitchenware, cleaning products and personal care items.' },
-  { image: '/images/textiles-clothing.jpg',   cat: 'Apparel',      name: 'Textiles & Clothing', desc: 'Wholesale fabrics, garments and apparel from leading manufacturers across Africa and Asia.' },
-  { image: '/images/healthcare.jpg',          cat: 'Healthcare',   name: 'Healthcare & Pharma', desc: 'Medical supplies and pharmacy stock sourced to international standards.' },
-  { image: '/images/automotive.jpg',          cat: 'Automotive',   name: 'Automotive Parts',    desc: 'Spare parts, accessories and lubricants from verified manufacturers.' },
+  { image: '/images/food-commodities.webp',    cat: 'Food',         name: 'Food & Commodities',  desc: 'Rice, sugar, flour, cooking oil and staple food commodities for wholesale distribution.' },
+  { image: '/images/building-materials.webp',  cat: 'Construction', name: 'Building Materials',  desc: 'Steel, cement, roofing sheets, pipes and hardware for large and residential projects.' },
+  { image: '/images/electronics.webp',         cat: 'Technology',   name: 'Electronics',         desc: 'Consumer electronics and home appliances from trusted global manufacturers.' },
+  { image: '/images/industrial-supplies.webp', cat: 'Industrial',   name: 'Industrial Supplies', desc: 'Heavy-duty equipment, tools, safety gear and machinery for construction and energy.' },
+  { image: '/images/household-goods.webp',     cat: 'Consumer',     name: 'Household Goods',     desc: 'Everyday essentials, kitchenware, cleaning products and personal care items.' },
+  { image: '/images/textiles-clothing.webp',   cat: 'Apparel',      name: 'Textiles & Clothing', desc: 'Wholesale fabrics, garments and apparel from leading manufacturers across Africa and Asia.' },
+  { image: '/images/healthcare.webp',          cat: 'Healthcare',   name: 'Healthcare & Pharma', desc: 'Medical supplies and pharmacy stock sourced to international standards.' },
+  { image: '/images/automotive.webp',          cat: 'Automotive',   name: 'Automotive Parts',    desc: 'Spare parts, accessories and lubricants from verified manufacturers.' },
 ]
 
 export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ zIndex: 0 }}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ zIndex: 0, filter: 'blur(5px) brightness(0.55) saturate(0.7)' }}
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
@@ -62,7 +62,7 @@ export default function Home() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, rgba(20,30,70,0.93) 0%, rgba(44,62,107,0.88) 55%, rgba(20,30,70,0.82) 100%)',
+            background: 'linear-gradient(135deg, rgba(10,15,40,0.72) 0%, rgba(30,43,85,0.65) 55%, rgba(10,15,40,0.60) 100%)',
             zIndex: 1,
           }}
         />
@@ -79,14 +79,14 @@ export default function Home() {
         />
 
         <div
-          className="relative max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-16 items-center"
+          className="relative w-full max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center"
           style={{ zIndex: 3 }}
         >
           <div>
             <div className="section-label text-gold mb-5">
               General Trading · Import · Export
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-[1.05] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-white leading-[1.05] mb-6">
               Bold.<br />
               <span className="text-gold">Reliable.</span><br />
               Built to Last.
@@ -294,9 +294,9 @@ export default function Home() {
             <div className="relative pb-6 md:pb-0">
               <div className="rounded-xl overflow-hidden aspect-[4/3]">
                 <img
-                  src="/images/team.jpg"
+                  src="/images/team.webp"
                   alt="Ratel General Trading team"
-                  className="w-full h-full object-cover"
+                  loading="lazy" className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-4 left-6 bg-navy rounded-xl px-6 py-4 shadow-xl">
@@ -419,7 +419,7 @@ export default function Home() {
           <div className="section-label justify-center mb-5" style={{ color: '#C9A84C' }}>
             Ready to Trade?
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
+          <h2 className="text-4xl font-serif font-bold text-white mb-4">
             Let's Work Together
           </h2>
           <p className="text-white/60 leading-relaxed mb-8 max-w-lg mx-auto">

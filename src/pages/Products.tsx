@@ -11,56 +11,56 @@ const FALLBACK: Product[] = [
     id: '1', name: 'Food & Commodities', category: 'food',
     description: 'Bulk agricultural products including rice, sugar, flour, cooking oil, and other staple food commodities for wholesale and retail distribution.',
     tags: ['Rice', 'Sugar', 'Flour', 'Cooking Oil', 'Grains'],
-    image_url: '/images/food-commodities.jpg',
+    image_url: '/images/food-commodities.webp',
     large: true, sort_order: 1, created_at: '',
   },
   {
     id: '2', name: 'Building Materials', category: 'building',
     description: 'Quality construction materials, steel, cement, roofing sheets, pipes, and hardware supplies for large-scale and residential projects.',
     tags: ['Steel', 'Cement', 'Roofing', 'Pipes', 'Hardware'],
-    image_url: '/images/building-materials.jpg',
+    image_url: '/images/building-materials.webp',
     large: false, sort_order: 2, created_at: '',
   },
   {
     id: '3', name: 'Electronics & Appliances', category: 'electronics',
     description: 'Consumer electronics, home appliances, and technology products sourced from trusted global manufacturers at competitive wholesale prices.',
     tags: ['Appliances', 'Gadgets', 'Lighting', 'Power', 'Tech'],
-    image_url: '/images/electronics.jpg',
+    image_url: '/images/electronics.webp',
     large: false, sort_order: 3, created_at: '',
   },
   {
     id: '4', name: 'Industrial Supplies', category: 'industrial',
     description: 'Heavy-duty industrial equipment, tools, safety gear, and machinery components for manufacturing, construction, and energy sectors.',
     tags: ['Tools', 'Machinery', 'Safety Gear', 'Equipment', 'Parts'],
-    image_url: '/images/industrial-supplies.jpg',
+    image_url: '/images/industrial-supplies.webp',
     large: true, sort_order: 4, created_at: '',
   },
   {
     id: '5', name: 'Household Goods', category: 'household',
     description: 'Everyday household essentials, cleaning products, kitchenware, furniture, and personal care items for retail and wholesale buyers.',
     tags: ['Kitchenware', 'Cleaning', 'Furniture', 'Personal Care'],
-    image_url: '/images/household-goods.jpg',
+    image_url: '/images/household-goods.webp',
     large: false, sort_order: 5, created_at: '',
   },
   {
     id: '6', name: 'Textiles & Clothing', category: 'textiles',
     description: 'Wholesale fabrics, garments, and apparel sourced from leading textile manufacturers across Asia and Africa for retail and distribution.',
     tags: ['Fabrics', 'Garments', 'Uniforms', 'Apparel', 'Wholesale'],
-    image_url: '/images/textiles-clothing.jpg',
+    image_url: '/images/textiles-clothing.webp',
     large: false, sort_order: 6, created_at: '',
   },
   {
     id: '7', name: 'Healthcare & Pharma', category: 'healthcare',
     description: 'Medical supplies, equipment, and pharmacy stock sourced to international standards for hospitals, clinics, and retail pharmacies.',
     tags: ['Medical Supplies', 'Equipment', 'Pharma', 'Certified'],
-    image_url: '/images/healthcare.jpg',
+    image_url: '/images/healthcare.webp',
     large: false, sort_order: 7, created_at: '',
   },
   {
     id: '8', name: 'Automotive Parts', category: 'automotive',
     description: 'Spare parts, accessories, and automotive supplies from verified manufacturers for garages, dealerships, and retail buyers.',
     tags: ['Spare Parts', 'Accessories', 'Lubricants', 'Tools'],
-    image_url: '/images/automotive.jpg',
+    image_url: '/images/automotive.webp',
     large: false, sort_order: 8, created_at: '',
   },
 ]
@@ -113,9 +113,9 @@ export default function Products() {
       <section className="relative min-h-[60vh] flex items-end overflow-hidden pt-20">
         <div className="absolute inset-0">
           <img
-            src="/images/producthero.jpg"
+            src="/images/producthero.webp"
             alt="Ratel General Trading product catalog"
-            className="w-full h-full object-cover"
+            loading="lazy" className="w-full h-full object-cover"
           />
           <div
             className="absolute inset-0"
@@ -215,9 +215,9 @@ export default function Products() {
                       className="relative overflow-hidden aspect-[3/2]"
                     >
                       <motion.img
-                        src={product.image_url ?? '/images/supply.png'}
+                        src={product.image_url ?? '/images/supply.webp'}
                         alt={product.name}
-                        className="w-full h-full object-cover"
+                        loading="lazy" className="w-full h-full object-cover"
                         animate={{ scale: hovered === product.id ? 1.05 : 1 }}
                         transition={{ duration: 0.5, ease: 'easeOut' }}
                       />
@@ -307,7 +307,7 @@ export default function Products() {
             <div className="relative px-10 md:px-16 py-14 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="max-w-xl">
                 <div className="section-label text-gold mb-4">Custom Orders</div>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-3">
+                <h2 className="text-4xl font-serif font-bold text-white mb-3">
                   Don't See What You Need?
                 </h2>
                 <p className="text-white/65 text-sm leading-relaxed">

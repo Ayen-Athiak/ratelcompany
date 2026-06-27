@@ -110,7 +110,7 @@ export default function FAQ() {
             transition={{ duration: 0.5 }}
           >
             <div className="section-label text-gold mb-4">Support</div>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-4 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-white mb-4 leading-tight">
               Frequently Asked<br />Questions
             </h1>
             <p className="text-white/60 max-w-xl leading-relaxed">
@@ -219,7 +219,7 @@ export default function FAQ() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <div className="section-label text-gold mb-3">Get in Touch</div>
-              <h2 className="text-3xl font-serif font-bold text-white">Still have questions?</h2>
+              <h2 className="text-4xl font-serif font-bold text-white">Still have questions?</h2>
               <p className="text-white/55 text-sm mt-2 leading-relaxed max-w-md">
                 Our team is available to answer any questions about our services, pricing, or trade process.
               </p>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import type { Session } from '@supabase/supabase-js'
 import { supabase } from './lib/supabase'
 import Navbar    from './components/Navbar'
@@ -11,28 +11,27 @@ import Products  from './pages/Products'
 import Blog      from './pages/Blog'
 import BlogPost  from './pages/BlogPost'
 import Contact   from './pages/Contact'
+import FAQ       from './pages/FAQ'
 import Login     from './admin/Login'
 import Dashboard from './admin/Dashboard'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
 
 function SplashScreen() {
   return (
     <div
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center"
-      style={{ background: '#2C3E6B' }}
+      style={{ background: '#ffffff' }}
     >
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
-      />
-      <div className="absolute left-0 inset-y-0 w-1" style={{ background: '#C9A84C' }} />
-      <div className="relative flex flex-col items-center gap-6 animate-pulse">
+      <div className="relative flex flex-col items-center gap-6">
         <img
-          src="/images/logo.png"
+          src="/images/logo.webp"
           alt="Ratel General Trading"
-          style={{ height: 80, width: 'auto', objectFit: 'contain' }}
+          style={{ height: 120, width: 'auto', objectFit: 'contain' }}
         />
         <div className="w-32 h-0.5 rounded-full overflow-hidden" style={{ background: 'rgba(201,168,76,0.2)' }}>
           <div
@@ -111,9 +110,11 @@ export default function App() {
         <Route path="/blog"       element={<PublicLayout><Blog /></PublicLayout>} />
         <Route path="/blog/:slug" element={<PublicLayout><BlogPost /></PublicLayout>} />
         <Route path="/contact"    element={<PublicLayout><Contact /></PublicLayout>} />
+        <Route path="/faq"        element={<PublicLayout><FAQ /></PublicLayout>} />
         <Route path="/admin"      element={<AdminRoute session={session} />} />
         <Route path="*"           element={<Navigate to="/" replace />} />
       </Routes>
+      <ScrollToTop />
     </BrowserRouter>
   )
 }

@@ -106,9 +106,9 @@ export default function Contact() {
       <section className="relative pt-20 min-h-[480px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/why.png"
+            src="/images/why.webp"
             alt="Contact Ratel General Trading"
-            className="w-full h-full object-cover"
+            loading="lazy" className="w-full h-full object-cover"
           />
           <div
             className="absolute inset-0"

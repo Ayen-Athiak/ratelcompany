@@ -5,7 +5,7 @@ const SERVICES = [
   {
     num: '01',
     slug: 'import',
-    image: '/images/import.jpg',
+    image: '/images/import.webp',
     label: 'Import Services',
     tagline: 'Bringing the World to Your Door',
     title: 'Import Services',
@@ -22,7 +22,7 @@ const SERVICES = [
   {
     num: '02',
     slug: 'export',
-    image: '/images/export.jpg',
+    image: '/images/export.webp',
     label: 'Export Services',
     tagline: 'Taking Your Products Global',
     title: 'Export Services',
@@ -39,7 +39,7 @@ const SERVICES = [
   {
     num: '03',
     slug: 'merchandise',
-    image: '/images/merchandise.jpg',
+    image: '/images/merchandise.webp',
     label: 'General Merchandise',
     tagline: 'A Broad Catalog, One Reliable Partner',
     title: 'General Merchandise',
@@ -56,7 +56,7 @@ const SERVICES = [
   {
     num: '04',
     slug: 'minerals',
-    image: '/images/mineral.png',
+    image: '/images/mineral.webp',
     label: 'Minerals & Precious Commodities',
     tagline: 'Responsibly Sourced, Globally Traded',
     title: 'Minerals & Precious Commodities',
@@ -73,7 +73,7 @@ const SERVICES = [
   {
     num: '05',
     slug: 'acacia-gum',
-    image: '/images/Acaciagum.png',
+    image: '/images/Acaciagum.webp',
     label: 'Acacia Gum',
     tagline: "Africa's Natural Export, Delivered Reliably",
     title: 'Acacia Gum',
@@ -90,7 +90,7 @@ const SERVICES = [
   {
     num: '06',
     slug: 'logistics',
-    image: '/images/team-logistics.jpg',
+    image: '/images/team-logistics.webp',
     label: 'Logistics & Supply Chain',
     tagline: 'End-to-End Coordination, Zero Surprises',
     title: 'Logistics & Supply Chain',
@@ -107,7 +107,7 @@ const SERVICES = [
   {
     num: '07',
     slug: 'game-lounge',
-    image: '/images/gamelounge.png',
+    image: '/images/gamelounge.webp',
     label: 'Game Lounge',
     tagline: 'Entertainment Spaces, Fully Equipped',
     title: 'Game Lounge',
@@ -124,7 +124,7 @@ const SERVICES = [
   {
     num: '08',
     slug: 'fast-food-bakery',
-    image: '/images/fastfoodbary.png',
+    image: '/images/fastfoodbary.webp',
     label: 'Fast Food Chains & Bakery',
     tagline: 'Supplying the Food and Beverage Industry',
     title: 'Fast Food Chains & Bakery',
@@ -141,7 +141,7 @@ const SERVICES = [
   {
     num: '09',
     slug: 'laundromat',
-    image: '/images/laundromat.png',
+    image: '/images/laundromat.webp',
     label: 'Laundromat',
     tagline: 'Equipment and Supplies for Laundry Businesses',
     title: 'Laundromat',
@@ -158,7 +158,7 @@ const SERVICES = [
   {
     num: '10',
     slug: 'auto-detailing',
-    image: '/images/serviceauto.png',
+    image: '/images/serviceauto.webp',
     label: 'Auto Detailing & Full Services',
     tagline: 'Everything Your Auto Business Needs',
     title: 'Auto Detailing & Full Services',
@@ -189,9 +189,9 @@ export default function Services() {
       <section className="relative min-h-[480px] flex items-end overflow-hidden pt-20">
         <div className="absolute inset-0">
           <img
-            src="/images/servicesimport.png"
+            src="/images/servicesimport.webp"
             alt="Ratel General Trading services"
-            className="w-full h-full object-cover"
+            loading="lazy" className="w-full h-full object-cover"
           />
           <div
             className="absolute inset-0"
@@ -240,7 +240,7 @@ export default function Services() {
 
             {/* Content panel */}
             <div className={`p-6 md:p-10 flex flex-col justify-center bg-white ${i % 2 !== 0 ? 'md:order-first' : ''}`}>
-              <h2 className="text-3xl font-serif font-bold text-navy mb-4">{title}</h2>
+              <h2 className="text-4xl font-serif font-bold text-navy mb-4">{title}</h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">{desc}</p>
               <ul className="space-y-2.5 mb-8">
                 {features.map(f => (

@@ -85,7 +85,7 @@ export default function Blog() {
                         <Calendar size={12} />
                         {new Date(post.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                       </div>
-                      <h2 className="text-lg font-serif font-bold text-navy mb-2 group-hover:text-gold transition-colors leading-snug">{post.title}</h2>
+                      <h2 className="text-xl font-serif font-bold text-navy mb-2 group-hover:text-gold transition-colors leading-snug">{post.title}</h2>
                       <p className="text-sm text-gray-500 leading-relaxed mb-4">{post.excerpt}</p>
                       <Link to={`/blog/${post.slug}`} className="inline-flex items-center gap-1.5 text-xs font-bold text-gold uppercase tracking-wider hover:gap-2.5 transition-all">
                         Read more <ArrowRight size={12} />
