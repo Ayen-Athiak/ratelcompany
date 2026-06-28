@@ -80,17 +80,17 @@ export default function Footer() {
                   href="tel:+211911302810"
                   className="text-sm text-white/55 hover:text-gold transition-colors"
                 >
-                  +211 911 302 810
+                  +211 922576966
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/211911195255"
+                  href="https://wa.me/211911194255"
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm text-white/55 hover:text-gold transition-colors"
                 >
-                  WhatsApp: +211 911 195 255
+                  WhatsApp: +211 911 194 255
                 </a>
               </li>
               <li>
@@ -129,7 +129,7 @@ export default function Footer() {
 
       {/* WhatsApp FAB */}
       <a
-        href="https://wa.me/211911195255"
+        href="https://wa.me/211911194255"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center shadow-xl z-50 transition-transform hover:scale-110"

@@ -120,16 +120,16 @@ export default function About() {
     <div className="grid md:grid-cols-2 gap-6">
       {[
         {
-          image: '/images/boss.webp',
-          label: 'Founder & CEO',
-          name: 'Victoria Kitale Jaden',
-          bio: 'Victoria founded Ratel General Trading in 2026 with a vision to build the most trusted trading company in East Africa. He leads the company with clarity, ambition, and an unwavering commitment to results.',
+          image: '/images/mrbiden.webp',
+          label: 'Chairperson, CEO & Co-Founder',
+          name: 'Biden Alone Akech Tong',
+          bio: 'Biden founded Ratel General Trading in 2026 with a vision to build the most trusted trading company in East Africa. He leads the company with clarity, ambition, and an unwavering commitment to results.',
         },
         {
-          image: '/images/ceo (2).webp',
-          label: 'Co-Founder & Managing Director',
-          name: 'Biden Peter',
-          bio: 'Biden co-founded Ratel and oversees strategic partnerships and business operations. He brings years of experience in cross-border trade with a network of suppliers and buyers across Africa, Asia, and Europe.',
+          image: '/images/victoria.webp',
+          label: 'Vice Chairperson, Managing Director & Co-Founder',
+          name: 'Victoria Kitale Jaden',
+          bio: 'Victoria serves as Vice Chief at Ratel, overseeing strategic partnerships and business operations. She brings years of experience in cross-border trade with a network of suppliers and buyers across Africa, Asia, and Europe.',
         },
         {
           image: '/images/mrlogistic.webp',

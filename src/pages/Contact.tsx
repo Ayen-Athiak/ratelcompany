@@ -15,9 +15,9 @@ const INQUIRY_TYPES = [
 ]
 
 const CONTACT_INFO = [
-  { Icon: Phone,         label: 'Phone',         value: '+211 911 302 810',                 href: 'tel:+211911302810' },
-  { Icon: MessageCircle, label: 'WhatsApp',       value: '+211 911 195 255',                 href: 'https://wa.me/211911195255' },
-  { Icon: Mail,          label: 'Email',          value: 'info@rateltrading.com',            href: 'mailto:info@rateltrading.com' },
+  { Icon: Phone,         label: 'Phone',         value: '+211 922 576 966',                 href: 'tel:+211922576966' },
+  { Icon: MessageCircle, label: 'WhatsApp',       value: '+211 911 194 255',                 href: 'https://wa.me/211911194255' },
+  { Icon: Mail,          label: 'Email',          value: 'biden@ratel-company.com',           href: 'mailto:biden@ratel-company.com' },
   { Icon: MapPin,        label: 'Location',       value: 'Juba, South Sudan',                href: undefined },
   { Icon: Clock,         label: 'Business Hours', value: 'Mon - Fri 8:00 AM - 6:00 PM EAT', href: undefined },
   { Icon: MessageCircle, label: 'X (Twitter)',    value: '@ratelcompany',                    href: 'https://x.com/ratelcompany' },
@@ -103,29 +103,24 @@ export default function Contact() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-20 min-h-[480px] flex items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/images/why.webp"
-            alt="Contact Ratel General Trading"
-            loading="lazy" className="w-full h-full object-cover"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(to top, rgba(20,30,70,0.97) 40%, rgba(20,30,70,0.55) 100%)',
-            }}
-          />
-        </div>
+      <section className="relative pt-20 min-h-[480px] flex items-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(135deg, #0f1c47 0%, #1e2f6e 40%, #2c3e6b 70%, #0f1c47 100%)',
+        }} />
+        {/* Radial glow */}
+        <div className="absolute inset-0" style={{
+          background: 'radial-gradient(ellipse 80% 60% at 50% 60%, rgba(201,168,76,0.08) 0%, transparent 70%)',
+        }} />
+        {/* Grid */}
+        <div className="absolute inset-0 opacity-[0.05]" style={{
+          backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }} />
+        {/* Gold left bar */}
         <div className="absolute left-0 inset-y-0 w-1 bg-gold" />
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
-        <div className="relative max-w-7xl mx-auto px-6 z-10 pb-16">
+
+        <div className="relative max-w-7xl mx-auto px-6 z-10 py-20">
           <div className="section-label text-gold mb-4">Reach Out</div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-white mb-4 leading-tight">
             Contact Us

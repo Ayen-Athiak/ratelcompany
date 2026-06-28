@@ -4,28 +4,24 @@ import { ArrowRight, Ship, Globe, Package, Truck } from 'lucide-react'
 const SERVICES = [
   {
     Icon: Ship,
-    num: '01',
     title: 'Import',
     desc: 'Quality goods sourced from global markets with competitive pricing and reliable delivery to your door.',
     image: '/images/import.webp',
   },
   {
     Icon: Globe,
-    num: '02',
     title: 'Export',
     desc: 'Connecting local producers with international buyers with full process management from documentation to delivery.',
     image: '/images/export.webp',
   },
   {
     Icon: Package,
-    num: '03',
     title: 'General Merchandise',
     desc: 'A broad catalog of consumer goods, industrial supplies, and specialty products for bulk and retail trade.',
     image: '/images/merchandise.webp',
   },
   {
     Icon: Truck,
-    num: '04',
     title: 'Logistics Support',
     desc: 'End-to-end logistics including freight forwarding, customs clearance, and last-mile delivery solutions.',
     image: '/images/logistics.webp',
@@ -164,7 +160,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
-            {SERVICES.map(({ Icon, num, title, desc, image }) => (
+            {SERVICES.map(({ Icon, title, desc, image }) => (
               <div
                 key={title}
                 className="group relative rounded-xl overflow-hidden aspect-[4/3]"
@@ -181,12 +177,6 @@ export default function Home() {
                   }}
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-7 z-10">
-                  <div
-                    className="text-2xs font-bold uppercase tracking-widest mb-2"
-                    style={{ color: 'rgba(201,168,76,0.7)' }}
-                  >
-                    {num}
-                  </div>
                   <div
                     className="w-9 h-9 rounded-full flex items-center justify-center mb-3"
                     style={{ background: '#C9A84C' }}
@@ -294,7 +284,7 @@ export default function Home() {
             <div className="relative pb-6 md:pb-0">
               <div className="rounded-xl overflow-hidden aspect-[4/3]">
                 <img
-                  src="/images/team.webp"
+                  src="/images/whyratel.webp"
                   alt="Ratel General Trading team"
                   loading="lazy" className="w-full h-full object-cover"
                 />
