@@ -117,43 +117,47 @@ export default function About() {
       </p>
     </div>
 
-    <div className="grid md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {[
         {
           image: '/images/mrbiden.webp',
+          pos: 'object-center',
           label: 'Chairperson, CEO & Co-Founder',
           name: 'Biden Alone Akech Tong',
           bio: 'Biden founded Ratel General Trading in 2026 with a vision to build the most trusted trading company in East Africa. He leads the company with clarity, ambition, and an unwavering commitment to results.',
         },
         {
           image: '/images/victoria.webp',
-          label: 'Vice Chairperson, Managing Director & Co-Founder',
+          pos: 'object-center',
+          label: 'Vice Chairperson & Co-Founder',
           name: 'Victoria Kitale Jaden',
           bio: 'Victoria serves as Vice Chief at Ratel, overseeing strategic partnerships and business operations. She brings years of experience in cross-border trade with a network of suppliers and buyers across Africa, Asia, and Europe.',
         },
         {
           image: '/images/mrlogistic.webp',
+          pos: 'object-top',
           label: 'Head of Trade Operations',
           name: 'John Okora',
           bio: 'John manages Ratel\'s import and export operations, ensuring every order is sourced, documented, and delivered to specification. His expertise in trade compliance is central to Ratel\'s reliability.',
         },
         {
           image: '/images/team-bizdev.webp',
+          pos: 'object-top',
           label: 'Logistics & Compliance Manager',
           name: 'David Wani',
           bio: 'David oversees logistics and supply chain operations, from freight forwarding and customs clearance to last-mile delivery. His knowledge of South Sudan\'s regulatory environment ensures shipments move smoothly.',
         },
-      ].map(({ image, label, name, bio }) => (
+      ].map(({ image, pos, label, name, bio }) => (
         <div
           key={name}
           className="group bg-white border border-gray-100 rounded-xl overflow-hidden hover:border-gold/30 hover:shadow-lg transition-all duration-300 flex flex-col sm:flex-row"
         >
           {/* Photo */}
-          <div className="h-52 sm:h-auto sm:w-40 w-full flex-shrink-0 relative overflow-hidden">
+          <div className="h-60 sm:h-auto sm:w-52 w-full flex-shrink-0 relative overflow-hidden">
             <img
               src={image}
               alt={name}
-              className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              className={`absolute inset-0 w-full h-full object-cover ${pos} group-hover:scale-105 transition-transform duration-500`}
             />
           </div>
 
