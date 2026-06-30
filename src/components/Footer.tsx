@@ -105,6 +105,18 @@ export default function Footer() {
                 <span className="text-sm text-white/55">Juba, South Sudan</span>
               </li>
             </ul>
+            <div className="mt-4 rounded-lg overflow-hidden border border-white/10">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.5098900646212!2d31.582525399999994!3d4.853856599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x171281d17c807199%3A0x2e0e30de8a428138!2sRatel%20General%20Trading!5e0!3m2!1sen!2sug!4v1782819986750!5m2!1sen!2sug"
+                width="100%"
+                height="120"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Ratel General Trading location"
+              />
+            </div>
           </div>
         </div>
 
