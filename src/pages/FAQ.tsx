@@ -26,7 +26,7 @@ const FAQS = [
     items: [
       {
         q: 'How do I place an order or make an inquiry?',
-        a: 'You can reach us through our Contact page, by email at info@rateltrading.com, or via WhatsApp. We will respond with a tailored quote based on your product, quantity, and destination.',
+        a: 'You can reach us through our Contact page, by email at biden@ratel-company.com, or via WhatsApp. We will respond with a tailored quote based on your product, quantity, and destination.',
       },
       {
         q: 'Can you source products not listed on your website?',

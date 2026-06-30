@@ -17,7 +17,7 @@ const INQUIRY_TYPES = [
 const CONTACT_INFO = [
   { Icon: Phone,         label: 'Phone',         value: '+211 922 576 966',                 href: 'tel:+211922576966' },
   { Icon: MessageCircle, label: 'WhatsApp',       value: '+211 911 194 255',                 href: 'https://wa.me/211911194255' },
-  { Icon: Mail,          label: 'Email',          value: 'info@rateltrading.com',            href: 'mailto:info@rateltrading.com' },
+  { Icon: Mail,          label: 'Email',          value: 'biden@ratel-company.com',            href: 'mailto:biden@ratel-company.com' },
   { Icon: MapPin,        label: 'Location',       value: 'Juba, South Sudan',                href: undefined },
   { Icon: Clock,         label: 'Business Hours', value: 'Mon - Fri 8:00 AM - 6:00 PM EAT', href: undefined },
   { Icon: MessageCircle, label: 'X (Twitter)',    value: '@ratelcompany',                    href: 'https://x.com/ratelcompany' },

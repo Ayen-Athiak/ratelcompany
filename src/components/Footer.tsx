@@ -95,10 +95,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@rateltrading.com"
+                  href="mailto:biden@ratel-company.com"
                   className="text-sm text-white/55 hover:text-gold transition-colors"
                 >
-                  info@rateltrading.com
+                  biden@ratel-company.com
                 </a>
               </li>
               <li>
